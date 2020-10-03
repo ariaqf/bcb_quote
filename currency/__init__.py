@@ -1,6 +1,5 @@
 import pycountry
 from fall_back import fallback
-from iso import get_country
 
 def get_metadata(currency_code):
     currency = {'countries': None, 'symbol': ''}
