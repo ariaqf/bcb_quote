@@ -1,5 +1,6 @@
 import requests
 from exceptions import NoQuoteForDateException, NoQuotesFoundException
+from currency import get_metadata
 
 def get_best_quote_by_date(date):
     best_quote = None
@@ -7,8 +8,8 @@ def get_best_quote_by_date(date):
     best_quote = interpret_data(date)
     if (best_quote['code'] == ''):
         raise NoQuotesFoundException('Please check the downloaded file as it\'s failed to be interpreted')
-    
-    return best_quote
+    enriched_quote = enrich_quote(best_quote)
+    return enriched_quote
         
 def download_quotes_by_date(date):
     '''the goal of this function is to download the reference data.
@@ -44,3 +45,11 @@ def interpret_data(date):
                 retr['code'] = line_name
                 retr['value'] = line_quote
     return retr
+
+def enrich_quote(quote):
+    currency_code = quote['code']
+    enriched_quote = {'code':quote['code'], 'value': quote['value'], 'countries':'', 'symbol':''}
+    currency_meta = get_metadata(currency_code)
+    enriched_quote['countries'] = currency_meta['countries']
+    enriched_quote['symbol'] = currency_meta['symbol']
+    return enriched_quote
