@@ -287,8 +287,8 @@ fallback = {
 'PLZ':{'countries':'Poland','symbol':'zł'},
 'PTE':{'countries':'Portugal','symbol':'$'},
 'RHD':{'countries':'Rhodesia','symbol':'$'},
-'ROK':{'countries':'Romania', 'symbol':'L'}
-'ROL':{'countries':'Romania', 'symbol':'L'}
+'ROK':{'countries':'Romania', 'symbol':'L'},
+'ROL':{'countries':'Romania', 'symbol':'L'},
 'RUR':{'countries':'Russia','symbol':'₽'},
 'SDD':{'countries':'Sudan','symbol':'LSd or £Sd'},
 'SDP':{'countries':'Sudan','symbol':'SDG, £SD or ج.س'},
@@ -306,8 +306,8 @@ fallback = {
 'USS':{'countries':'United States of America','symbol':''},
 'UYN':{'countries':'Uruguay','symbol':'$ or $U'},
 'UYP':{'countries':'Uruguay','symbol':'$ or $U'},
-'VEF':{'countries':'Venezuela', 'symbol':'Bs.S. or Bs'}
-'VEB':{'countries':'Venezuela', 'symbol':'Bs.S. or Bs'}
+'VEF':{'countries':'Venezuela', 'symbol':'Bs.S. or Bs'},
+'VEB':{'countries':'Venezuela', 'symbol':'Bs.S. or Bs'},
 'VNC':{'countries':'Vietnam','symbol':'₫/đ'},
 'XEU':{'countries':'European Union ','symbol':'₠'},
 'XFO':{'countries':'','symbol':''},

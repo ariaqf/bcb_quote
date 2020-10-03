@@ -1,5 +1,5 @@
 import pycountry
-from fall_back import fallback
+from currency.fall_back import fallback
 
 def get_metadata(currency_code):
     currency = {'countries': None, 'symbol': ''}
@@ -10,10 +10,11 @@ def get_metadata(currency_code):
     except:
         pass
     # We will use a fallback database in case the library doesn't know the currency.
-    if countries == '':
+    if currency['countries'] is None or currency['countries'] == '':
         currency['countries'] = get_country_from_fallback(currency_code)
-    if symbol == '':
+    if currency['symbol'] == '':
         currency['symbol'] = get_symbol_from_fallback(currency_code)
+    return currency
         
 def get_country_from_fallback(code):
     return fallback[code]['countries']
