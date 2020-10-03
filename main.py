@@ -10,7 +10,6 @@ def print_best_quote_for_date(date):
         print('x')
     except Exception as e:
         print(e)
-        
 
 if __name__ == '__main__':
     if(check_args(sys.argv)):
